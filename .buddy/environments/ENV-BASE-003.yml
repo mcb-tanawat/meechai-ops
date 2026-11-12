@@ -1,0 +1,6 @@
+- environment: env-base-003
+  name: ENV-BASE-003
+  base_only: true
+  icon: 🏅
+  note: Configuration Precedence Record
+  agent_note: Configuration Precedence Record

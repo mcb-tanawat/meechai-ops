@@ -1,0 +1,16 @@
+- environment: env-base001
+  name: ENV-BASE-001
+  permissions:
+    others: DEFAULT
+    groups:
+      Domain Ownership: USE_ONLY
+    environments:
+    - all: USE_ONLY
+    - environment: env-base-002
+      access: DENIED
+    - environment: env-base-003
+      access: DENIED
+    - environment: env-base-001
+      access: DENIED
+  base_only: true
+  icon: 🥉

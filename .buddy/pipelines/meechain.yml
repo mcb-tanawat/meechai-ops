@@ -1,0 +1,20 @@
+- pipeline: meechain
+  refs:
+  - refs/heads/main
+  fail_on_prepare_env_warning: true
+  events:
+  - type: WEBHOOK
+  actions:
+  - action: Test
+    type: VM_LINUX
+    timeout: 5000
+    ignore_errors: true
+    trigger_conditions:
+    - trigger_condition: TRIGGERING_USER_IS_IN_GROUP
+      trigger_group: Domain Access Permission
+    instance_type: GENERAL_MEDIUM
+    mount_paths:
+    - pipeline_path: /
+      vm_path: /buddy
+    - pipeline_path: /
+      vm_path: /home/ubuntu/build

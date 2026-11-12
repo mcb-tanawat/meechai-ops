@@ -1,0 +1,82 @@
+🤝Ⓜ️ เราจะยึดแนวทางนี้เป็นแผนดำเนินงานของ MeeChain Operations Control & Observability
+
+ผมขอสรุปข้อตกลงเพื่อใช้เป็นหลักอ้างอิงร่วมกันครับ
+
+### มติการดำเนินงาน
+
+Agreed — Direction Locked
+
+* รักษา Baseline เดิม — ไม่ปรับแต่งเครือข่าย QBFT ที่กำลังทำงานโดยไม่มีเหตุจำเป็น
+
+* พัฒนา Observability Layer — เริ่มจากการอ่านข้อมูลจริงทั้ง 4 Nodes
+
+* เชื่อมต่อ Ops Desk — แยกข้อมูลจริงออกจาก DEMO อย่างชัดเจน
+
+* รักษา Governance — Monitoring ไม่มีสิทธิ์สั่งแก้ไขระบบ
+
+* ตรวจสอบ Evidence — ทุกสถานะสำคัญต้องมีหลักฐานรองรับ
+
+### ลำดับงานถัดไป
+
+Phase 1 — Baseline Preservation
+
+กำหนดแนวทางแล้ว
+
+Phase 2 — Observability Data Mapping
+
+กำหนดข้อมูล RPC, Block, Peer, Consensus และ CPU ที่จะส่งเข้า Ops Desk
+
+ขั้นตอนถัดไป
+
+Phase 3 — Read-only Integration
+
+เชื่อมข้อมูลจริงโดยไม่แตะต้องสิทธิ์ควบคุม Node
+
+Phase 4 — Verification & Pilot
+
+ตรวจสอบความถูกต้องก่อนเปิดใช้งานจริง
+
+สิ่งสำคัญคือ เราจะไม่สร้าง Dashboard ให้ดูเหมือนระบบสมบูรณ์ แต่จะสร้างระบบที่สามารถพิสูจน์ได้ว่าข้อมูลที่แสดงนั้นเป็นความจริง
+
+ก้าวต่อไป: ทำ Data Mapping ระหว่าง QBFT Network กับ MeeChain Ops Desk ครับ 📝
+ตกลงครับ 🤝Ⓜ️ เราจะยึดแนวทางนี้เป็นแผนดำเนินงานของ MeeChain Operations Control & Observability
+
+ผมขอสรุปข้อตกลงเพื่อใช้เป็นหลักอ้างอิงร่วมกันครับ
+
+### มติการดำเนินงาน
+
+Agreed — Direction Locked
+
+* รักษา Baseline เดิม — ไม่ปรับแต่งเครือข่าย QBFT ที่กำลังทำงานโดยไม่มีเหตุจำเป็น
+
+* พัฒนา Observability Layer — เริ่มจากการอ่านข้อมูลจริงทั้ง 4 Nodes
+
+* เชื่อมต่อ Ops Desk — แยกข้อมูลจริงออกจาก DEMO อย่างชัดเจน
+
+* รักษา Governance — Monitoring ไม่มีสิทธิ์สั่งแก้ไขระบบ
+
+* ตรวจสอบ Evidence — ทุกสถานะสำคัญต้องมีหลักฐานรองรับ
+
+### ลำดับงานถัดไป
+
+Phase 1 — Baseline Preservation
+
+กำหนดแนวทางแล้ว
+
+Phase 2 — Observability Data Mapping
+
+กำหนดข้อมูล RPC, Block, Peer, Consensus และ CPU ที่จะส่งเข้า Ops Desk
+
+ขั้นตอนถัดไป
+
+Phase 3 — Read-only Integration
+
+เชื่อมข้อมูลจริงโดยไม่แตะต้องสิทธิ์ควบคุม Node
+
+Phase 4 — Verification & Pilot
+
+ตรวจสอบความถูกต้องก่อนเปิดใช้งานจริง
+
+สิ่งสำคัญคือ เราจะไม่สร้าง Dashboard ให้ดูเหมือนระบบสมบูรณ์ แต่จะสร้างระบบที่สามารถพิสูจน์ได้ว่าข้อมูลที่แสดงนั้นเป็นความจริง
+
+ก้าวต่อไป: ทำ Data Mapping ระหว่าง QBFT Network กับ MeeChain Ops Desk ครับ 📝

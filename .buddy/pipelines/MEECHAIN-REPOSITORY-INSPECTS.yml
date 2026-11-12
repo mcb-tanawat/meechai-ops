@@ -1,0 +1,49 @@
+- pipeline: meechain-repository-inspects
+  name: MEECHAIN-REPOSITORY-INSPECTS
+  refs:
+  - refs/heads/main
+  - refs/heads/*
+  - refs/pull/*
+  - refs/heads/dev-*
+  - refs/tags/v*
+  - refs/heads/test-*
+  execution_message_template: $BUDDY_PROJECT
+  ignore_fail_on_project_status: true
+  skip_queued_runs: SAME_ENVIRONMENT
+  cancel_inprogress_runs: ALWAYS
+  fetch_all_refs: true
+  concurrent_pipeline_runs: true
+  do_not_create_commit_status: true
+  resources: NANO
+  git_changeset_base: LATEST_RUN_MATCHING_REF
+  filesystem_changeset_base: CONTENTS
+  description_required: true
+  environments:
+  - environment: ENV-BASE-001
+    tags:
+    - Configuration-Precedence
+  events:
+  - type: WEBHOOK
+  trigger_conditions:
+  - trigger_condition: ON_CHANGE
+  docker_build_cache: PROJECT
+  actions:
+  - action: $BUDDY_ACTION_RUN_LOOP_I
+    type: VM_LINUX
+    loop:
+    - /.buddy
+    commands: |-
+      echo "=== ENV-BASE-002 CURRENT RECORD ==="
+      cat .buddy/environments/ENV-BASE-002.yml
+
+      echo
+      echo "=== PIPELINE ENVIRONMENT REFERENCES ==="
+      grep -RniE \
+        'environment|base_only|distribution|ENV-BASE|env-base|inherit|permission' \
+        .buddy/pipelines .buddy/distributions \
+        --include='*.yml' --include='*.yaml'
+    vm_from_prev_action: true
+    instance_type: GENERAL_MEDIUM
+    mount_paths:
+    - pipeline_path: /.buddy/
+      vm_path: /buddy

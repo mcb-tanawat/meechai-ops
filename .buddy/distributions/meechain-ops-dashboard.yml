@@ -1,0 +1,5 @@
+- distribution: meechain-ops-dashboard
+  permissions:
+    others: READ_ONLY
+    users:
+      agent.meechain: MANAGE

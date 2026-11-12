@@ -1,0 +1,39 @@
+บันทึก Baseline
+
+เราจะกำหนดสถานะนี้เป็น MeeChain QBFT – Baseline V1 (6 November 2026)
+
+Baseline V1
+
+Recorded
+
+### 4 / 4 Nodes
+
+Consensus network · Chain ID 13390
+
+| รายการ        | สถานะ          |
+| ------------- | -------------- |
+| Genesis       | SHA-256 ตรงกัน |
+| Block Hash    | ตรงกัน         |
+| Parent Hash   | ตรงกัน         |
+| Peer Network  | เชื่อมต่อครบ   |
+| QBFT Quorum   | 3              |
+| CPU Pressure  | สูง            |
+| RAM Available | 1.6 GiB        |
+
+หลักการดำเนินงานต่อจากนี้
+
+* ไม่แก้ไข Baseline เดิม
+
+* เก็บค่าก่อนปรับทุกครั้ง
+
+* ทดลองเปลี่ยนแปลงทีละตัวแปร
+
+* ตรวจสอบ Block Hash, Consensus และ Peer Connectivity
+
+* เปรียบเทียบผลก่อนและหลังปรับปรุง
+
+ข้อเสนอสำคัญ: ขั้นต่อไปควรเป็น Performance Optimization โดยเริ่มจากตรวจสอบ CPU pressure และพฤติกรรม Round Change ก่อนปรับแต่ง QBFT
+
+เราจะได้รู้ว่าอะไรทำให้เครือข่ายดีขึ้นจริง ไม่ใช่เพียงทำให้ตัวเลขดูดีขึ้นครับ
+
+นี่คือจุดอ้างอิงแรกของ MeeChain QBFT ที่เราจะใช้พัฒนาต่อไปครับ 📝

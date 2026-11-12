@@ -1,0 +1,42 @@
+- pipeline: meechain-ops-pipeline
+  name: MeeChain-Ops-pipeline
+  refs:
+  - refs/heads/main
+  skip_queued_runs: NEVER
+  description_required: true
+  folder: 'BUDDY '
+  environments:
+  - tags:
+    - Inheritance-Rules
+    - Governance
+    scope: WORKSPACE
+  events:
+  - type: WEBHOOK
+  permissions:
+    others: RUN_ONLY
+    users:
+      mcb: READ_WRITE
+  actions:
+  - action: apt updated
+    type: VM_LINUX
+    disabled: true
+    commands: apt updated
+    instance_type: GENERAL_MEDIUM
+    mount_paths:
+    - pipeline_path: /
+      vm_path: /buddy
+  - action: apt updated 3
+    type: VM_LINUX
+    commands: apt updated
+    instance_type: GENERAL_MEDIUM
+    mount_paths:
+    - pipeline_path: /
+      vm_path: /buddy
+  - action: apt updated 2
+    type: VM_LINUX
+    disabled: true
+    commands: apt updated
+    instance_type: GENERAL_MEDIUM
+    mount_paths:
+    - pipeline_path: /
+      vm_path: /buddy

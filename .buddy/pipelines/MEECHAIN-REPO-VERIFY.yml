@@ -1,0 +1,32 @@
+- pipeline: meechain-repo-verify
+  name: MEECHAIN-REPO-VERIFY
+  refs:
+  - refs/heads/main
+  target_site_url: https://app.meechain.live
+  always_from_scratch: true
+  ignore_fail_on_project_status: true
+  skip_queued_runs: NEVER
+  cancel_inprogress_runs: SAME_REF
+  auto_clear_cache: true
+  fail_on_prepare_env_warning: true
+  clone_depth: 1
+  resources: NANO
+  description_required: true
+  permissions:
+    others: DEFAULT
+    users:
+      agent.node-1: READ_WRITE
+      mcb: READ_WRITE
+  docker_build_cache: WORKSPACE
+  actions:
+  - action: Verify pipeline context
+    type: BUILD
+    commands: |-
+      echo "MEECHAIN-REPO-VERIFY: pipeline started"
+      echo "Repository ref: $BUDDY_RUN_REF"
+      echo "This initial run validates the Buddy pipeline context only."
+    cached_dirs:
+    - /
+    shell: BASH
+    image_location: ACTION
+    docker_registry: DOCKER_HUB
